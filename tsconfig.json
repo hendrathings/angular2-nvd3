@@ -9,13 +9,13 @@
         "noImplicitAny": false,
         "declaration": true,
         "sourceMap": false,
-        "outDir": "build"
+        "outDir": "dist"
     },
     "files": [
         "src/angular2-nvd3/angular2-nvd3.component.ts",
         "src/angular2-nvd3/angular2-nvd3.directive.ts",
         "src/angular2-nvd3/angular2-nvd3.module.ts",
-        "test/ng2-nvd3.spec.ts",
+        "test/angular2-nvd3.spec.ts",
         "test/vendor.ts",
         "test/spec.d.ts"
     ]

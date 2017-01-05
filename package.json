@@ -2,7 +2,7 @@
   "name": "angular2-nvd3",
   "version": "1.0.0-beta.1",
   "description": "Angular2 component for NVD3.js",
-  "main": "build/angular2-nvd3/angular2-nvd3.umd.js",
+  "main": "dist/angular2-nvd3/angular2-nvd3.d.ts",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hendrathings/angular2-nvd3.git"
+    "url": "https://github.com/hendrathings/angular2-nvd3.git"
   },
   "keywords": [
     "angular2",
@@ -28,5 +28,11 @@
   "bugs": {
     "url": "https://github.com/hendrathings/angular2-nvd3/issues"
   },
-  "homepage": "https://github.com/hendrathings/angular2-nvd3#readme"
+  "homepage": "https://github.com/hendrathings/angular2-nvd3#readme",
+  "dependencies": {
+    "@types/d3": "^3.5.35",
+    "@types/nvd3": "^1.8.33",
+    "d3": "^3.5.17",
+    "nvd3": "^1.8.5"
+  }
 }
