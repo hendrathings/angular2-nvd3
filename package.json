@@ -2,7 +2,7 @@
   "name": "angular2-nvd3",
   "version": "1.0.0-beta.1",
   "description": "Angular2 component for NVD3.js",
-  "main": "dist/angular2-nvd3/angular2-nvd3.d.ts",
+  "main": "dist/angular2-nvd3/angular2-nvd3.module.d.ts",
   "directories": {
     "test": "test"
   },
