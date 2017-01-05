@@ -9,14 +9,19 @@
         "noImplicitAny": false,
         "declaration": true,
         "sourceMap": false,
-        "outDir": "dist"
+        "outDir": "dist",
+        "lib": [ "es6", "dom" ],
+        "typeRoots": [
+            "./node_modules/@types"
+        ]
     },
     "files": [
         "src/angular2-nvd3/angular2-nvd3.component.ts",
         "src/angular2-nvd3/angular2-nvd3.directive.ts",
         "src/angular2-nvd3/angular2-nvd3.module.ts",
-        "test/angular2-nvd3.spec.ts",
-        "test/vendor.ts",
-        "test/spec.d.ts"
+        "test/angular2-nvd3.spec.ts"
+    ],
+    "filesGlob": [
+        "typings/browser.d.ts"
     ]
 }

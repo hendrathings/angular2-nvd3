@@ -9,7 +9,8 @@
   "scripts": {
     "pretest": "npm run compile",
     "test": "karma start karma.conf.js",
-    "compile": "rm -rf dist && tsc"
+    "compile": "rm -rf dist && tsc",
+    "test:lint": "tslint -c tslint.json 'src/angular2-nvd3/angular2-nvd3.*.ts'"
   },
   "repository": {
     "type": "git",
@@ -34,5 +35,19 @@
     "@types/nvd3": "^1.8.33",
     "d3": "^3.5.17",
     "nvd3": "^1.8.5"
+  },
+  "devDependencies": {
+    "@angular/common": "^2.4.1",
+    "@angular/compiler": "^2.4.1",
+    "@angular/core": "^2.4.1",
+    "@angular/forms": "^2.4.1",
+    "@angular/platform-browser": "^2.4.1",
+    "@angular/platform-browser-dynamic": "^2.4.1",
+    "es6-shim": "^0.35.2",
+    "reflect-metadata": "^0.1.9",
+    "rxjs": "^5.0.2",
+    "tslint": "^4.2.0",
+    "typescript": "^2.1.4",
+    "zone.js": "^0.7.4"
   }
 }
