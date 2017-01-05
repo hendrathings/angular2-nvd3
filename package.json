@@ -1,0 +1,32 @@
+{
+  "name": "angular2-nvd3",
+  "version": "1.0.0-beta.1",
+  "description": "Angular2 component for NVD3.js",
+  "main": "build/angular2-nvd3/angular2-nvd3.umd.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "pretest": "npm run compile",
+    "test": "karma start karma.conf.js",
+    "compile": "rm -rf dist && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hendrathings/angular2-nvd3.git"
+  },
+  "keywords": [
+    "angular2",
+    "ng2",
+    "nvd3",
+    "d3",
+    "component",
+    "directive"
+  ],
+  "author": "Gung Mahendra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hendrathings/angular2-nvd3/issues"
+  },
+  "homepage": "https://github.com/hendrathings/angular2-nvd3#readme"
+}
