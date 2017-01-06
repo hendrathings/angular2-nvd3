@@ -2,7 +2,7 @@ import { Component, ElementRef, Inject, Input, OnChanges } from '@angular/core';
 import * as d3 from 'd3';
 import * as nv from 'nvd3';
 
-@Component({ selector: 'app-nvd3' })
+@Component({ selector: 'app-nvd3', template: '' })
 export class NvD3Component implements OnChanges {
     @Input()
     private options: any;
@@ -10,9 +10,9 @@ export class NvD3Component implements OnChanges {
     @Input()
     private data: any;
 
-    el: any;
-    chart: any;
-    svg: any;
+    private el: any;
+    private chart: any;
+    private svg: any;
     private isViewInitialize: boolean = false;
 
     constructor(elementRef: ElementRef) {

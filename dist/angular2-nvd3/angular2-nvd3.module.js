@@ -9,8 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var common_1 = require("@angular/common");
-var forms_1 = require("@angular/forms");
 var angular2_nvd3_component_1 = require("./angular2-nvd3.component");
 var angular2_nvd3_directive_1 = require("./angular2-nvd3.directive");
 var NvD3Module = (function () {
@@ -20,10 +18,6 @@ var NvD3Module = (function () {
 }());
 NvD3Module = __decorate([
     core_1.NgModule({
-        imports: [
-            forms_1.FormsModule,
-            common_1.CommonModule
-        ],
         declarations: [
             angular2_nvd3_component_1.NvD3Component,
             angular2_nvd3_directive_1.NvD3Directive

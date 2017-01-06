@@ -8,13 +8,13 @@
   },
   "scripts": {
     "pretest": "npm run compile",
-    "test": "karma start karma.conf.js",
+    "test": "npm run test:lint",
     "compile": "rm -rf dist && tsc",
     "test:lint": "tslint -c tslint.json 'src/angular2-nvd3/angular2-nvd3.*.ts'"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hendrathings/angular2-nvd3.git"
+    "url": "git+https://github.com/hendrathings/angular2-nvd3.git"
   },
   "keywords": [
     "angular2",
@@ -40,10 +40,8 @@
     "@angular/common": "^2.4.1",
     "@angular/compiler": "^2.4.1",
     "@angular/core": "^2.4.1",
-    "@angular/forms": "^2.4.1",
     "@angular/platform-browser": "^2.4.1",
     "@angular/platform-browser-dynamic": "^2.4.1",
-    "es6-shim": "^0.35.2",
     "reflect-metadata": "^0.1.9",
     "rxjs": "^5.0.2",
     "tslint": "^4.2.0",

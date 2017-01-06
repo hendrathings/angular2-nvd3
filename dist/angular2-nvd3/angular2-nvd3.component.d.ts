@@ -2,9 +2,9 @@ import { ElementRef, OnChanges } from '@angular/core';
 export declare class NvD3Component implements OnChanges {
     private options;
     private data;
-    el: any;
-    chart: any;
-    svg: any;
+    private el;
+    private chart;
+    private svg;
     private isViewInitialize;
     constructor(elementRef: ElementRef);
     ngOnChanges(): void;

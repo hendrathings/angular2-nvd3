@@ -224,7 +224,7 @@ __decorate([
     __metadata("design:type", Object)
 ], NvD3Component.prototype, "data", void 0);
 NvD3Component = __decorate([
-    core_1.Component({ selector: 'app-nvd3' }),
+    core_1.Component({ selector: 'app-nvd3', template: '' }),
     __metadata("design:paramtypes", [core_1.ElementRef])
 ], NvD3Component);
 exports.NvD3Component = NvD3Component;
