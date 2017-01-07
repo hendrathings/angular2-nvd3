@@ -144,7 +144,7 @@ you rock....!!!
 
 ## Change Log
 
-### 1.0.0-beta.1 (master)
+### 1.0.1 (master)
 
 - Angular2 - v2.4.1
 
