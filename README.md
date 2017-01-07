@@ -1,6 +1,9 @@
 # angular2-nvd3
 
-[![NPM Version](https://img.shields.io/npm/v/angular2-nvd3.svg?style=flat)](https://www.npmjs.org/package/ng2-nvd3)
+[![NPM Version](https://img.shields.io/npm/v/angular2-nvd3.svg?style=flat)](https://www.npmjs.org/package/angular2-nvd3)
+[![NPM license](http://img.shields.io/npm/l/angular2-nvd3.svg?style=flat)](https://www.npmjs.org/package/angular2-nvd3)
+[![Dependency Status](https://david-dm.org/hendrathings/angular2-nvd3.svg)](https://david-dm.org/hendrathings/angular2-nvd3)
+
 
 Create nvd3 with angular2 use directive or as a component.
 This project has tested latest angular2 `v2.4.1`.
@@ -9,7 +12,7 @@ If you are using nvd3 for angular2.RC take a look [ng2-nvd3](https://github.com/
 
 ## Install
 
-Before using this module, make sure to install node dependency:
+This node use some dependency of [@types](https://github.com/DefinitelyTyped/DefinitelyTyped) :
 
 - @types/nvd3
 - @types/d3

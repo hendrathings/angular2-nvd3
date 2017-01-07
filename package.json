@@ -1,7 +1,7 @@
 {
   "name": "angular2-nvd3",
   "version": "1.0.1",
-  "description": "Angular2 component for NVD3.js",
+  "description": "Angular2 module for NVD3 chart",
   "directories": {
     "test": "test"
   },
@@ -20,8 +20,11 @@
     "ng2",
     "nvd3",
     "d3",
+    "directive",
     "component",
-    "directive"
+    "module",
+    "chart",
+    "graph"
   ],
   "author": "Gung Mahendra",
   "license": "MIT",

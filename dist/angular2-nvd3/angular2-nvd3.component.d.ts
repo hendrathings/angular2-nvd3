@@ -1,18 +1,10 @@
-import { ElementRef, OnChanges } from '@angular/core';
-export declare class NvD3Component implements OnChanges {
+import { ElementRef, OnChanges, AfterViewInit } from '@angular/core';
+export declare class NvD3Component implements OnChanges, AfterViewInit {
+    private el;
     private options;
     private data;
-    private el;
-    private chart;
-    private svg;
-    private isViewInitialize;
-    constructor(elementRef: ElementRef);
+    private ngNvD3;
+    constructor(el: ElementRef);
     ngOnChanges(): void;
     ngAfterViewInit(): void;
-    ngOnDestroy(): void;
-    private updateWithOptions(options);
-    private updateWithData(data);
-    private configure(chart, options, chartType);
-    private configureEvents(dispatch, options);
-    private clearElement();
 }
