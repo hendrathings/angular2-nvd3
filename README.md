@@ -5,7 +5,7 @@
 Create nvd3 with angular2 use directive or as a component.
 This project has tested latest angular2 `v2.4.1`.
 This project is reincarnation from [ng2-nvd3](https://github.com/krispo/ng2-nvd3).
-If you need nvd3 for angular2.RC pleace check [ng2-nvd3](https://github.com/krispo/ng2-nvd3).
+If you are using nvd3 for angular2.RC take a look [ng2-nvd3](https://github.com/krispo/ng2-nvd3).
 
 ## Install
 
@@ -16,13 +16,13 @@ Before using this module, make sure to install node dependency:
 - d3
 - nvd3
 
-Just in case chart background change to black, make sure to include `nvd3.css` via transpiler `webpack` or `systemjs` or what your transpiler.
+Most of people get chart background turn into black, make sure to include `nvd3.css` via transpiler `webpack` or `systemjs` or what your transpiler.
 
 ## Usage
 
 Hopefully you already know how to use decorator, module, component, directive, input on angular2.
 
-Include module on your app module or where your parent module before using:
+Include module in your root module of your target component decalaration via `NgModule`.
 
 ```js
 import { NvD3Module } from 'angular2-nvd3';
@@ -35,6 +35,9 @@ import { NvD3Module } from 'angular2-nvd3';
     NvD3Module
     ...
   ],
+  declarations: [
+    ... // your component target to implement nvd3
+  ]
   ...
 })
 ```

@@ -20,8 +20,5 @@
         "src/angular2-nvd3/angular2-nvd3.component.ts",
         "src/angular2-nvd3/angular2-nvd3.directive.ts",
         "src/angular2-nvd3/angular2-nvd3.module.ts"
-    ],
-    "filesGlob": [
-        "typings/browser.d.ts"
     ]
 }
