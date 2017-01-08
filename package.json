@@ -6,8 +6,9 @@
     "test": "test"
   },
   "scripts": {
+    "prepublish": "npm run compile",
     "pretest": "npm run compile",
-    "test": "npm run test:lint",
+    "test": "npm run test:lint && karma start karma.conf.js",
     "compile": "rm -rf dist && tsc",
     "test:lint": "tslint -c tslint.json 'src/angular2-nvd3/angular2-nvd3.*.ts'"
   },
@@ -44,10 +45,20 @@
     "@angular/core": "^2.4.1",
     "@angular/platform-browser": "^2.4.1",
     "@angular/platform-browser-dynamic": "^2.4.1",
+    "@types/jasmine": "^2.5.40",
+    "core-js": "^2.4.1",
+    "jasmine": "^2.5.2",
+    "karma": "^0.12.37",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-typescript-preprocessor2": "^1.2.1",
+    "karma-webpack": "~1.6.0",
     "reflect-metadata": "^0.1.9",
     "rxjs": "^5.0.2",
+    "ts-loader": "^1.3.3",
     "tslint": "^4.2.0",
     "typescript": "^2.1.4",
+    "webpack": "^1.14.0",
     "zone.js": "^0.7.4"
   },
   "main": "dist/angular2-nvd3/angular2-nvd3.module.js",
