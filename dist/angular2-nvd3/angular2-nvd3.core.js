@@ -4,23 +4,20 @@ var nv = require("nvd3");
 var Angular2NvD3;
 (function (Angular2NvD3) {
     var NgNvD3 = (function () {
-        function NgNvD3(el, options, data) {
+        function NgNvD3(el) {
             this.viewInitialize = false;
             this.el = el;
-            this.data = data;
-            this.options = options;
         }
-        NgNvD3.getInstance = function (el, options, data) {
+        NgNvD3.getInstance = function (el) {
             if (!NgNvD3.instance) {
-                NgNvD3.instance = new NgNvD3(el, options, data);
+                NgNvD3.instance = new NgNvD3(el);
             }
             return NgNvD3.instance;
         };
         NgNvD3.prototype.isViewInitialize = function (value) {
             this.viewInitialize = value;
         };
-        NgNvD3.prototype.updateWithOptions = function () {
-            var options = this.options;
+        NgNvD3.prototype.updateWithOptions = function (options, data) {
             if (!this.viewInitialize || !options) {
                 return;
             }
@@ -100,7 +97,7 @@ var Angular2NvD3;
                     this.chart[key](options.chart[key]);
                 }
             }
-            this.updateWithData(this.data);
+            this.updateWithData(data, options);
             nv.addGraph(function () {
                 if (!self.chart) {
                     return;
@@ -116,18 +113,18 @@ var Angular2NvD3;
                 return self.chart;
             }, options.chart['callback']);
         };
-        NgNvD3.prototype.updateWithData = function (data) {
+        NgNvD3.prototype.updateWithData = function (data, options) {
             if (data) {
                 d3.select(this.el.nativeElement).select('svg').remove();
                 var h = void 0, w = void 0;
                 this.svg = d3.select(this.el.nativeElement).append('svg');
-                if (h = this.options.chart.height) {
+                if (h = options.chart.height) {
                     if (!isNaN(+h)) {
                         h += 'px';
                     }
                     this.svg.attr('height', h).style({ height: h });
                 }
-                if (w = this.options.chart.width) {
+                if (w = options.chart.width) {
                     if (!isNaN(+w)) {
                         w += 'px';
                     }

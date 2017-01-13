@@ -1,10 +1,10 @@
-import { ElementRef, OnChanges, AfterViewInit } from '@angular/core';
-export declare class NvD3Directive implements OnChanges, AfterViewInit {
+import { ElementRef, OnChanges, OnInit } from '@angular/core';
+export declare class NvD3Directive implements OnChanges, OnInit {
     private el;
-    private options;
-    private data;
+    options: any;
+    data: any;
     private ngNvD3;
     constructor(el: ElementRef);
     ngOnChanges(): void;
-    ngAfterViewInit(): void;
+    ngOnInit(): void;
 }

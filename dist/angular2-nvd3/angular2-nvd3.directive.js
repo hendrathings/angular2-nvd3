@@ -13,14 +13,14 @@ var angular2_nvd3_core_1 = require("./angular2-nvd3.core");
 var NvD3Directive = (function () {
     function NvD3Directive(el) {
         this.el = el;
-        this.ngNvD3 = angular2_nvd3_core_1.Angular2NvD3.NgNvD3.getInstance(this.el, this.data, this.options);
+        this.ngNvD3 = angular2_nvd3_core_1.Angular2NvD3.NgNvD3.getInstance(this.el);
     }
     NvD3Directive.prototype.ngOnChanges = function () {
-        this.ngNvD3.updateWithOptions();
+        this.ngNvD3.updateWithOptions(this.options, this.data);
     };
-    NvD3Directive.prototype.ngAfterViewInit = function () {
+    NvD3Directive.prototype.ngOnInit = function () {
         this.ngNvD3.isViewInitialize(true);
-        this.ngNvD3.updateWithOptions();
+        this.ngNvD3.updateWithOptions(this.options, this.data);
     };
     return NvD3Directive;
 }());
