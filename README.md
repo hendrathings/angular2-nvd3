@@ -14,10 +14,10 @@ If you are using nvd3 for angular2.RC take a look [ng2-nvd3](https://github.com/
 
 This node use some dependency of [@types](https://github.com/DefinitelyTyped/DefinitelyTyped) :
 
-- @types/nvd3
-- @types/d3
-- d3
-- nvd3
+- @types/nvd3@^1.8.33
+- @types/d3@^3.5.35
+- d3@^3.5.17
+- nvd3@^1.8.5
 
 Most of people get chart background turn into black, make sure to include `nvd3.css` via transpiler `webpack` or `systemjs` or what your transpiler.
 
@@ -144,11 +144,4 @@ you can set your callback:
 ```
 
 you rock....!!!
-
-## Change Log
-
-### 1.0.1 (master)
-
-- Angular2 - v2.4.1
-
 

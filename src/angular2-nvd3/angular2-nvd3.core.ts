@@ -5,32 +5,19 @@ export namespace Angular2NvD3 {
 
     export class NgNvD3 {
         private el: any;
-        private data: any;
-        private options: any;
         private chart: any;
         private svg: any;
         private viewInitialize: boolean = false;
-        private static instance: NgNvD3;
 
-        constructor(el, options, data) {
+        constructor(el) {
             this.el = el;
-            this.data = data;
-            this.options = options;
-        }
-
-        static getInstance(el, options, data) {
-            if (!NgNvD3.instance) {
-                NgNvD3.instance = new NgNvD3(el, options, data);
-            }
-            return NgNvD3.instance;
         }
 
         public isViewInitialize(value: boolean) {
             this.viewInitialize = value;
         }
 
-        public updateWithOptions() {
-            let options = this.options;
+        public updateWithOptions(options: any, data: any) {
             // Exit if options are not yet bound
             if (!this.viewInitialize || !options) { return; };
 
@@ -108,16 +95,16 @@ export namespace Angular2NvD3 {
                 } else { this.chart[key](options.chart[key]); }
             }
 
-            this.updateWithData(this.data);
+            this.updateWithData(data, options);
 
-            nv.addGraph(function() {
+            nv.addGraph(() => {
                 if (!self.chart) { return; }
 
                 // Remove resize handler. Due to async execution should be placed here, not in the clearElement
                 if (self.chart.resizeHandler) { self.chart.resizeHandler.clear(); }
 
                 // Update the chart when window resizes
-                self.chart.resizeHandler = nv.utils.windowResize(function() {
+                self.chart.resizeHandler = nv.utils.windowResize(() => {
                     if (self.chart && self.chart.update) { self.chart.update(); }
                 });
 
@@ -125,7 +112,7 @@ export namespace Angular2NvD3 {
             }, options.chart['callback']);
         }
 
-        private updateWithData(data) {
+        private updateWithData(data: any, options: any) {
             if (data) {
                 // remove whole svg element with old data
                 d3.select(this.el.nativeElement).select('svg').remove();
@@ -134,11 +121,11 @@ export namespace Angular2NvD3 {
 
                 // Select the current element to add <svg> element and to render the chart in
                 this.svg = d3.select(this.el.nativeElement).append('svg');
-                if (h = this.options.chart.height) {
+                if (h = options.chart.height) {
                     if (!isNaN(+h)) { h += 'px'; }
                     this.svg.attr('height', h).style({height: h});
                 }
-                if (w = this.options.chart.width) {
+                if (w = options.chart.width) {
                     if (!isNaN(+w)) { w += 'px'; }
                     this.svg.attr('width', w).style({width: w});
                 } else {
