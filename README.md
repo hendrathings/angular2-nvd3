@@ -87,18 +87,18 @@ all chaining function use ase json...
           bottom: 40,
           left: 55
         },
-        x: function (d) { return d.x; },
-        y: function (d) { return d.y; },
+        x: (d) => { return d.x; },
+        y: (d) => { return d.y; },
         xScale: d3.time.scale(),
         xAxis: {
           ticks: d3.time.months,
-          tickFormat: function (d) {
+          tickFormat: (d) => {
               return d3.time.format('%b')(new Date(d));
           }
         },
         yAxis: {
           axisLabel: 'Gross volume',
-          tickFormat: function (d) {
+          tickFormat: (d) => {
               if (d == null) {
                   return 0;
               }
