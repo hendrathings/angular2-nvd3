@@ -12,7 +12,7 @@ export class NvD3Directive implements OnChanges, OnInit {
     private ngNvD3: any;
 
     constructor(private el: ElementRef) {
-        this.ngNvD3 = Angular2NvD3.NgNvD3.getInstance(this.el);
+        this.ngNvD3 = new Angular2NvD3.NgNvD3(this.el);
     }
 
     ngOnChanges() {

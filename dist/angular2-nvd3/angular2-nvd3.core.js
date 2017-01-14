@@ -8,12 +8,6 @@ var Angular2NvD3;
             this.viewInitialize = false;
             this.el = el;
         }
-        NgNvD3.getInstance = function (el) {
-            if (!NgNvD3.instance) {
-                NgNvD3.instance = new NgNvD3(el);
-            }
-            return NgNvD3.instance;
-        };
         NgNvD3.prototype.isViewInitialize = function (value) {
             this.viewInitialize = value;
         };

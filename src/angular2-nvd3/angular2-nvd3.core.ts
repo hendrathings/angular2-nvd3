@@ -8,17 +8,9 @@ export namespace Angular2NvD3 {
         private chart: any;
         private svg: any;
         private viewInitialize: boolean = false;
-        private static instance: NgNvD3;
 
         constructor(el) {
             this.el = el;
-        }
-
-        static getInstance(el) {
-            if (!NgNvD3.instance) {
-                NgNvD3.instance = new NgNvD3(el);
-            }
-            return NgNvD3.instance;
         }
 
         public isViewInitialize(value: boolean) {

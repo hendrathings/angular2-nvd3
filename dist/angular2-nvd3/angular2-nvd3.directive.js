@@ -13,7 +13,7 @@ var angular2_nvd3_core_1 = require("./angular2-nvd3.core");
 var NvD3Directive = (function () {
     function NvD3Directive(el) {
         this.el = el;
-        this.ngNvD3 = angular2_nvd3_core_1.Angular2NvD3.NgNvD3.getInstance(this.el);
+        this.ngNvD3 = new angular2_nvd3_core_1.Angular2NvD3.NgNvD3(this.el);
     }
     NvD3Directive.prototype.ngOnChanges = function () {
         this.ngNvD3.updateWithOptions(this.options, this.data);
