@@ -9,17 +9,16 @@ module.exports = function (config) {
     plugins: [
       require('karma-jasmine'),
       require('karma-webpack'),
-      require('karma-phantomjs-launcher'),
-      require('karma-typescript-preprocessor2')
+      require('karma-phantomjs-launcher')
     ],
     files: [
-      'src/test/*.ts',
-      'src/test/*.spec.ts'
+      'polyfills.browser.ts',
+      'src/**/*.spec.ts'
     ],
-    exclude: [
-    ],
+    exclude: [],
     preprocessors: {
-      'src/**/*.ts': ['webpack']
+      'polyfills.browser.ts': ['webpack'],
+      'src/test/*.spec.ts': ['webpack']
     },
     webpack: {
       module: webpackConfig.module,
