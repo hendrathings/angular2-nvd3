@@ -12,13 +12,11 @@ module.exports = function (config) {
       require('karma-phantomjs-launcher')
     ],
     files: [
-      'polyfills.browser.ts',
-      'src/**/*.spec.ts'
+      'src/test/test.ts'
     ],
     exclude: [],
     preprocessors: {
-      'polyfills.browser.ts': ['webpack'],
-      'src/test/*.spec.ts': ['webpack']
+      'src/test/test.ts': ['webpack']
     },
     webpack: {
       module: webpackConfig.module,
