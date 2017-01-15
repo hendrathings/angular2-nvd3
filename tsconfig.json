@@ -19,6 +19,7 @@
     "files": [
         "src/angular2-nvd3/angular2-nvd3.component.ts",
         "src/angular2-nvd3/angular2-nvd3.directive.ts",
-        "src/angular2-nvd3/angular2-nvd3.module.ts"
+        "src/angular2-nvd3/angular2-nvd3.module.ts",
+        "src/test/angular2-nvd3.component.spec.ts"
     ]
 }
