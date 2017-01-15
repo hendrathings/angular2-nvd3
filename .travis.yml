@@ -10,4 +10,4 @@ branch:
     - master
 
 script:
-  - node_modules/.bin/karma start karma.conf.js --auto-watch --single-run --reporters karma-phantomjs-launcher
+  - node_modules/.bin/karma start karma.conf.js --auto-watch --single-run --reporters progress
