@@ -8,9 +8,7 @@ branch:
   only:
     - master
 
-before_script:
-  - npm run test:lint
-  - node_modules/.bin/karma start karma.conf.js --auto-watch --single-run --reporters progress
-
 script:
+ - npm run test:lint
+ - node_modules/.bin/karma start karma.conf.js --auto-watch --single-run --reporters progress
  - npm run compile
