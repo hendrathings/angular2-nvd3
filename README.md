@@ -3,7 +3,7 @@
 [![NPM Version](https://img.shields.io/npm/v/angular2-nvd3.svg?style=flat)](https://www.npmjs.org/package/angular2-nvd3)
 [![NPM license](http://img.shields.io/npm/l/angular2-nvd3.svg?style=flat)](https://www.npmjs.org/package/angular2-nvd3)
 [![Dependency Status](https://david-dm.org/hendrathings/angular2-nvd3.svg)](https://david-dm.org/hendrathings/angular2-nvd3)
-
+[![Build Status](https://travis-ci.org/hendrathings/angular2-nvd3.svg?branch=master)](https://travis-ci.org/hendrathings/angular2-nvd3)
 
 Create nvd3 with angular2 use directive or as a component.
 This project has tested latest angular2 `v2.4.1`.
@@ -19,7 +19,7 @@ This node use some dependency of [@types](https://github.com/DefinitelyTyped/Def
 - d3@^3.5.17
 - nvd3@^1.8.5
 
-Most of people get chart background turn into black, make sure to include `nvd3.css` via transpiler `webpack` or `systemjs` or what your transpiler.
+Most of people get chart background turn into black, make sure to include `nvd3.css` via transpiler `webpack` or `systemjs` or current using it.
 
 ## Usage
 
