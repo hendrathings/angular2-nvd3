@@ -11,7 +11,10 @@
         "sourceMap": false,
         "rootDir": "src",
         "outDir": "dist",
-        "lib": [ "es6", "dom" ],
+        "lib": [
+            "es6",
+            "dom"
+        ],
         "typeRoots": [
             "./node_modules/@types"
         ]
@@ -20,5 +23,9 @@
         "src/angular2-nvd3/angular2-nvd3.component.ts",
         "src/angular2-nvd3/angular2-nvd3.directive.ts",
         "src/angular2-nvd3/angular2-nvd3.module.ts"
-    ]
+    ],
+    "angularCompilerOptions": {
+        "strictMetadataEmit": true,
+        "genDir": "dist"
+    }
 }
