@@ -9,7 +9,7 @@
     "prepublish": "npm run compile",
     "pretest": "npm run compile",
     "test": "npm run test:lint && karma start karma.conf.js",
-    "compile": "rm -rf dist && tsc",
+    "compile": "rm -rf dist && ngc",
     "test:lint": "tslint -c tslint.json 'src/angular2-nvd3/angular2-nvd3.*.ts'"
   },
   "repository": {
@@ -42,6 +42,7 @@
   "devDependencies": {
     "@angular/common": "^2.4.1",
     "@angular/compiler": "^2.4.1",
+    "@angular/compiler-cli": "^2.4.10",
     "@angular/core": "^2.4.1",
     "@angular/platform-browser": "^2.4.1",
     "@angular/platform-browser-dynamic": "^2.4.1",
