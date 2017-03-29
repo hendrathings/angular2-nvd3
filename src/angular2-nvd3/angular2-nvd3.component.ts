@@ -15,7 +15,7 @@ export class NvD3Component implements OnChanges, OnInit {
         this.ngNvD3 = new Angular2NvD3.NgNvD3(this.el);
     }
 
-    ngOnChanges() {
+    ngOnChanges(changes?) {
         this.ngNvD3.updateWithOptions(this.options, this.data);
     }
 
